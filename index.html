@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Building Regulations Compliance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Building Regulations Compliance Tracker</h1>
+            <p>Track design decisions against Approved Documents A-P</p>
+        </div>
+
+        <div class="project-info">
+            <strong>Project Details:</strong>
+            <input type="text" id="projectName" placeholder="Project Name" style="width: 200px;">
+            <input type="text" id="projectRef" placeholder="Project Reference" style="width: 150px;">
+            <input type="text" id="designerName" placeholder="Designer Name" style="width: 200px;">
+            <button class="btn" onclick="saveProject()">Save Project</button>
+            <button class="btn" onclick="generateReport()">Generate Report</button>
+            <br><br>
+            <strong>Data Management for GitHub:</strong>
+            <button class="btn" onclick="exportProjectData()" style="background: #28a745;">Export Project</button>
+            <button class="btn" onclick="importProjectData()" style="background: #17a2b8;">Import Project</button>
+        </div>
+
+        <input type="text" class="search-box" id="searchBox" placeholder="Search requirements..." onkeyup="searchRequirements()">
+
+        <div class="summary" id="summary">
+            <strong>Compliance Summary:</strong> <span id="summaryText">Complete the requirements below</span>
+        </div>
+
+        <div id="approvedDocs">
+            <!-- Approved Documents will be generated here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
